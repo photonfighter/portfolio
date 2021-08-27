@@ -16,6 +16,11 @@ import { ProjectsContainer } from "/src/components/projects-components/projects-
 import { ProjectsHeader } from "/src/components/projects-components/projects-header/projects-header.styles";
 import { ProjectTilesContainer } from "../components/projects-components/project-tiles-container/project-tiles-container.styles";
 import ProjectTile from "../components/projects-components/project-tile/project-tile";
+import { ContactContainer } from "../components/contact-components/contact-container/contact-container.styles";
+import { FormContainer } from "../components/contact-components/form-container/form-container.styles";
+import { SocialContainer } from "../components/contact-components/social-container/social-container.styles";
+import { ContactHeader } from "../components/contact-components/contact-header/contact-header.styles";
+import { FormSocialContainer } from "../components/contact-components/form-social-container/form-social-container.styles";
 
 // markup
 const IndexPage = () => {
@@ -42,6 +47,15 @@ const IndexPage = () => {
             <ProjectTile />
         </ProjectTilesContainer>
       </ProjectsContainer>
+
+      <ContactContainer>
+        <ContactHeader>Hey, we should talk.</ContactHeader>
+        <FormSocialContainer>
+          <FormContainer></FormContainer>
+          <SocialContainer></SocialContainer>
+        </FormSocialContainer>
+        
+      </ContactContainer>
 
       <Footer />
     </PageContainer>
