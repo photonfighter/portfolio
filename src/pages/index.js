@@ -22,6 +22,10 @@ import { SocialContainer } from "../components/contact-components/social-contain
 import { ContactHeader } from "../components/contact-components/contact-header/contact-header.styles";
 import { FormSocialContainer } from "../components/contact-components/form-social-container/form-social-container.styles";
 
+import SovaLineupsScreenshot from '/src/images/sova-lineups.png';
+import GameOfLifeScreenshot from '/src/images/game-of-life.png';
+import ReshawkScreenshot from '/src/images/reshawk.png';
+
 // markup
 const IndexPage = () => {
   return (
@@ -41,10 +45,27 @@ const IndexPage = () => {
       <ProjectsContainer>
         <ProjectsHeader>What I've Been Working On</ProjectsHeader>
         <ProjectTilesContainer>
-            <ProjectTile />
-            <ProjectTile />
-            <ProjectTile />
-            <ProjectTile />
+            <ProjectTile 
+              img={ SovaLineupsScreenshot }
+              description="A React application for Valorant players to learn Sova recon arrow lineups on the fly."
+              headerText="Sova Lineups"
+              link="https://github.com/photonfighter/sova-lineups"
+              />
+            <ProjectTile 
+              img={ GameOfLifeScreenshot }
+              description="Though Conway's Game of Life cannot be truly done in 3D, I thought it would be a good challenge
+                to stack different GoL planes and have some fun with Three.js, a 3D WebGL library."
+              headerText="Game of Life 3D"
+              link="https://github.com/photonfighter/game-of-life"
+              />
+            <ProjectTile 
+              img={ ReshawkScreenshot }
+              description="Though originally intended to be a holistic approach to residence hall management, after some
+                feasability analysis and market research it turned out to just be a great way to learn more about Firebase,
+                JWT Authentication, and Express. It's no longer in development :("
+              headerText="Reshawk / Reshawk API"
+              link="https://github.com/photonfighter/reshawk-api"
+              />
         </ProjectTilesContainer>
       </ProjectsContainer>
 

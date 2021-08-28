@@ -1,12 +1,16 @@
 import React from "react";
-import { ProjectTileContainer, ProjectTileImage, ProjectTileDescription, ProjectTileHeader } from "./project-tile.styles";
+import { ProjectTileContainer, ProjectTileImage, ProjectTileDescription, ProjectTileHeader, ProjectTileLink, ProjectTileTextContainer } from "./project-tile.styles";
 
-const ProjectTile = () => {
+const ProjectTile = ({ img, headerText, description, link}) => {
     return (
         <ProjectTileContainer>
-            <ProjectTileHeader></ProjectTileHeader>
-            <ProjectTileImage />
-            <ProjectTileDescription></ProjectTileDescription>
+            <ProjectTileImage src={ img }/>
+            <ProjectTileTextContainer>
+                <ProjectTileHeader>{ headerText }</ProjectTileHeader>
+                <ProjectTileDescription>{ description }</ProjectTileDescription>
+                <ProjectTileLink href={ link }>Github</ProjectTileLink>
+            </ProjectTileTextContainer>
+            
         </ProjectTileContainer>
     )
 };
